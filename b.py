@@ -1,14 +1,15 @@
-   # (b)  Calculate the Area of a Triangle where its three sides a, b, c are given. s=(a+b+c)/2, Area=square root of s(s-a)(s-b)(s-c) (write program without using function)
-# Prompt the user to input the lengths of the three sides of a triangle as floats.
-a = float(input("Enter the length of side a: "))
-b = float(input("Enter the length of side b: "))
-c = float(input("Enter the length of side c: "))
+ # b) Check whether the given year is a Leap Year.
+ # Prompt the user to input a year
+year = int(input("Enter a year: "))
 
-# Calculate the semi-perimeter of the triangle.
-s = (a + b + c) / 2
-
-# Calculate the area of the triangle using Heron's formula.
-area = (s * (s - a) * (s - b) * (s - c)) ** 0.5
-
-# Print the calculated area of the triangle.
-print("The area of the triangle is {:.2f}".format(area))   
+# Check if the year is a leap year
+if (year % 4) == 0:
+    if (year % 100) == 0:
+        if (year % 400) == 0:
+            print("The year is a leap year.")
+        else:
+            print("The year is not a leap year.")
+    else:
+        print("The year is a leap year.")
+else:
+    print("The year is not a leap year.")
